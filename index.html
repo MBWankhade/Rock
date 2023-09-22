@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="scoreboard">
+            <div class="title">
+                ROCK <br> PAPER <br> SCISSORS
+            </div>
+            <div class="comp-score">
+                COMPUTER <br> SCORE <br>
+                <span class="number">0</span>
+            </div>
+            <div class="your-score">
+                YOUR <br> SCORE <br>
+                <span class="number">0</span>
+            </div>
+        </div>
+
+        <div class="lines">
+            <div class="line1 line"></div>
+            <div class="line2 line"></div>
+            <div class="line3 line"></div>
+        </div>
+
+        <div class="hands">
+            <div class="rock hand " onclick="pickUserHand('rock')">
+                <img id="rock" src="rock.png" alt="Rock" ">
+            </div>
+            <div class=" paper hand" onclick="pickUserHand('paper')">
+                <img id="paper" src="paper.png" alt="Paper">
+            </div>
+            <div class="scissors hand" onclick="pickUserHand('scissors')">
+                <img id="scissors" src="scissor.png" alt="Scissors">
+            </div>
+        </div>
+
+        <div class="contest">
+            <div id="green" class="userhand">
+                <h1>YOU PICKED</h1>
+                <div class="handImageContainer" 
+                style= 
+                "background: #ffffff;
+                border-radius: 50%;
+                text-align: center;
+                margin: 30px 0px 0px -20px;
+                justify-content: center;">
+                    <img id="userPickImage" style= "margin: 20px 30px;">
+                </div>
+            </div>
+            <div class="referee">
+                <div class="decision">
+                    <h1>YOU WIN</h1>
+                    <h2>AGAINST PC</h2>
+                </div>
+                <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+            </div>
+            <div class="computerhand">
+                <h1>PC PICKED</h1>
+                <div class="handImageContainer1" style="
+                background: #ffffff;
+                border-radius: 50%;
+                text-align: center;
+                margin: 30px 0px 0px -20px;
+                justify-content: center;">
+                    <img id="computerPickImage" style="
+                    margin: 17px 12px;
+                    ">
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="rules-btn btn">rules</button>
+            <button class="next-btn btn" id="next-btn">next</button>
+        </div>
+
+        <div id="rules-container">
+            <div class="close" id="close">
+              <img src="X.png" alt="close"
+            
+                width="23"
+                height="31"
+                viewBox="0 0 23 31"
+                fill="none"
+               >
+               
+            </div>
+            <h3>Game Rules</h3>
+            <ul class="rules">
+              <li>
+                <svg
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  
+                >
+                  <rect width="8" height="8" fill="#FFD600" />
+                </svg>
+                Rock beats scissors, scissors beat paper, and paper beats rock.
+              </li>
+              <li>
+                <svg
+                width="8"
+                height="8"
+                viewBox="0 0 8 8"
+                fill="none">
+                  <rect width="8" height="8" fill="#FFD600" />
+                </svg>
+                Agree ahead of time whether you’ll count off “rock, paper, scissors,
+                shoot” or just “rock, paper, scissors.”
+              </li>
+              <li>
+                <svg
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <rect width="8" height="8" fill="#FFD600" />
+                </svg>
+                Use rock, paper, scissors to settle minor decisions or simply play
+                to pass the time
+              </li>
+              <li>
+                <svg
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  
+                 >
+                  <rect width="8" height="8" fill="#FFD600" />
+                </svg>
+                If both players lay down the same hand, each player lays down
+                another hand
+              </li>
+            </ul>
+        </div>
+
+
+        <section class="won-game">
+            <img src="star.png" alt="stars" id="stars" />
+            <img src="award.png" alt="VectorTrophy" id="trophy" />
+            <h2 class="won-game-heading">HURRAY!!</h2>
+            <h6 class="won-game-sub-heading">YOU WON THE GAME</h6>
+            <button class="filled-btn large " onclick="restartGame()">play again</button>
+            <div class="buttons">
+              <button class="rules-btn btn">rules</button>
+            </div>
+          </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
